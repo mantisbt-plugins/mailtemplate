@@ -36,10 +36,10 @@ Nothing will change yet, everything works as before.
 Next open up entries-config_inc.php and add these to your mail settings in your config_inc.php
 As of now the adjusted scripts will kick in.
 
-In case you want to de-activate the functionality, just change:
-$g_use_mailtemplate = ON;
-into
-$g_use_mailtemplate = OFF;
+In case you want to de-activate the functionality, just change:<br>
+$g_use_mailtemplate = ON;<br>
+into<br>
+$g_use_mailtemplate = OFF;<br>
 
 ## Configuration
 
