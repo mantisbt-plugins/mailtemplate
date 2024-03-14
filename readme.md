@@ -21,11 +21,12 @@ Released under the [GPL v3 license](http://opensource.org/licenses/GPL-3.0).
 
 ## Installation
 
-Please make a backup of the following files from your mantis installation:
-config/config_inc.php	( entries need to be added )
-core/email_api.php	( here i made changes to core, marked with "## CN" )
+Please make a backup of the following files from your mantis installation:<br>
+config/config_inc.php	( entries need to be added )<br>
+core/email_api.php	( here i made changes to core, marked with "## CN" )<br>
 In case you are running 2.25 or 2.26, copy the correspong email_api.php into the core directory of your Mantisbt installation.<br>
 Ensure you rename it again to "email_api.php"<br>
+In addition, copy template_api.php from the core directory of the distribution into the core directory of your mantis installation.<br>
 
 In case you are running a different version from 2.25 or 2.26:<br>
 Copy  template_api.php from the core directory of the distribution to the core directory of your mantis installation.<br>
