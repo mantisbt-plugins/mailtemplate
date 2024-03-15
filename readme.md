@@ -84,11 +84,11 @@ Have a blast!
 
 ## changes
 
-08-10-2020	Initial version
-26-10-2020	Bugfixes
-25-06-2022	Added Escape funtion
-25-06-2022	Added special template for new issues
-17-08-2022	Made the Escape function configurable (config_inc.php & core/email_api.php)
-17-08-2022	Fixed minor lay-out issues in template_api.php
-14-03-2024	Added improved readme
-14-03-2024	Added sample email_api.php for MantisBT version 2.26
+08-10-2020	Initial version<br>
+26-10-2020	Bugfixes<br>
+25-06-2022	Added Escape funtion<br>
+25-06-2022	Added special template for new issues<br>
+17-08-2022	Made the Escape function configurable (config_inc.php & core/email_api.php)<br>
+17-08-2022	Fixed minor lay-out issues in template_api.php<br>
+14-03-2024	Added improved readme<br>
+14-03-2024	Added sample email_api.php for MantisBT version 2.26<br>
