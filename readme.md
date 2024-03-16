@@ -19,8 +19,8 @@ Released under the [GPL v3 license](http://opensource.org/licenses/GPL-3.0).
 ## Installation
 
 1. Backup the following files from your Mantis installation:
-    - `config/config_inc.php` (add entries as needed)
-    - `core/email_api.php` (changes in core marked with "## CN")
+    - `config/config_inc.php` 
+    - `core/email_api.php` 
 
 2. Next, perform the following copy operations:
     a. Copy `~/distribution/core/template_api.php` into `~/mantis/core/` folder.
