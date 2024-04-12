@@ -181,7 +181,7 @@ function email_template_bugnote( $p_bugnote, $p_project_id, $p_show_time_trackin
 	$variable['bug_url'] = string_get_bug_view_url_with_fqdn( $t_bug_id );
 	$t_query 	= "SELECT summary,name FROM {bug} B , {category}  WHERE B.category_id = C.id and B.id = $t_bug_id";
 	$t_result	= db_query($t_query);
-	$row_1 = db_fetch_array($t_result))
+	$row_1 = db_fetch_array($t_result);
 	$t_summary	= $row_1['summary'];
 	$t_category	= $t_row['name'];
 	$variable['summary'] = $t_summary;
