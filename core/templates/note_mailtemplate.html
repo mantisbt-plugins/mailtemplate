@@ -9,38 +9,131 @@ Available fields to this template:
 	$variables['timetrack'] = Time_tracking
 	$variables['url']		= Link to bugnote
 	$variables['note']		= The note itself
-	$variable['bug_id']		= Bug_id;
-	$variable['bug_url']	= Link to bug
-	$variable['summary']	= Summary text og bug
-	$variable['category']	= Name of category
+	$variables['bug_id']		= Bug_id;
+	$variables['bug_url']	= Link to bug
+	$variables['summary']	= Summary text og bug
+	$variables['category']	= Name of category
+	$variables['project']	= Name of project
 	
 	## how to use the fields
 	all elements ( only those you need of course) need to be referenced inbetween "{{" and "}}"
 -->
 <!DOCTYPE html>
-<style>
-body {
-    background-color: #93B874;
-}
-h1 {
-    background-color: #00b33c;
-}
-p {
-    background-color: #FFFFFF);
-}
-table, th, td {  
-	border: 1px solid black;}
-</style>
-<h2 style="color:red; background:black;">
-{{ top_line }}
-</h2>
-<br>
-<table>
-<tr><td><b>Note-id </b> </td><td>{{ note_id }} <a href={{ url }}> View Note inside the Issue Tracker</a></td></tr>
-<tr><td><b>Reporter </b></td><td> {{ reporter }}</td></tr>
-<tr><td><b>Access level </b></td><td> {{ access }}</td></tr>
-<tr><td><b>Last modified</b></td><td> {{ modified }}</td></tr>
-<tr><td><b>Private</b></td><td> {{ private }}</td></tr>
-<tr><td><b>Timetracking</b></td><td><pre> {{ timetrack }} </pre></td></tr>
-<tr><td><b>Note</b></td><td><pre> {{ note }} </pre></td></tr>
 <html>
+
+<head>
+    <title>Note Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #93B874;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            background: #f2f2f2;
+            padding: 10px;
+            margin: 0;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #006066;
+            color: white;
+            text-align: left;
+        }
+
+        td {
+            background-color: #FFFFFF;
+        }
+
+        a {
+            color: #006066;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>{{ top_line }}</h2>
+        <br>
+        <table>
+            <tr>
+                <th>Issue</th>
+                <td><a href={{ url }}>{{ bug_id }}</a></td>
+            </tr>
+            <tr>
+                <th>Issue Summary</th>
+                <td>{{ summary }}</td>
+            </tr>
+            <tr>
+                <th>Project/Category</th>
+                <td>{{ project }}: {{ category }}</td>
+            </tr>
+            <tr>
+                <th>Note ID </th>
+                <td><a href={{ url }}>{{ note_id }}</a></td>
+            </tr>
+            <tr>
+                <th>Reporter</th>
+                <td>{{ reporter }}</td>
+            </tr>
+            <tr>
+                <th>Access level</th>
+                <td>{{ access }}</td>
+            </tr>
+            <tr>
+                <th>Last modified</th>
+                <td>{{ modified }}</td>
+            </tr>
+            <tr>
+                <th>Private</th>
+                <td>{{ private }}</td>
+            </tr>
+            <tr>
+                <th>Timetracking</th>
+                <td><pre>{{ timetrack }}</pre></td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td><pre>{{ note }}</pre></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+
