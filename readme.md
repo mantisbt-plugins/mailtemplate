@@ -92,3 +92,5 @@ Have a blast!
 17-08-2022	Fixed minor lay-out issues in template_api.php<br>
 14-03-2024	Added improved readme<br>
 14-03-2024	Added sample email_api.php for MantisBT version 2.26<br>
+12-04-2024	Added 4 fields to bug_note_template<br>
+12-04-2024	Documented all fields for (and within) the bug_note_template<br>
