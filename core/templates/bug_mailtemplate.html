@@ -56,7 +56,7 @@ Available fields to this template:
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
+        h3 {
             color: #333;
             background: #f2f2f2;
             padding: 10px;
@@ -104,11 +104,23 @@ Available fields to this template:
 
 <body>
     <div class="container">
-        <h2>{{ top_line }}</h2>
+        <h3>{{ summary }}</h3>
         <table>
             <tr>
                 <th>Issue-id</th>
-                <td>{{ bug_id }} <a href="{{ url }}">View all details inside the Issue Tracker</a></td>
+                <td><a href={{ url }}>{{ bug_id }}</a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ description }}</td>
+            </tr>
+            <tr>
+                <th>Project/Category</th>
+                <td>{{ project }}: {{ category }}</td>
+            </tr>
+			<tr>
+                <th>Reporter</th>
+                <td>{{ reporter }}</td>
             </tr>
             <tr>
                 <th>Status</th>
@@ -119,10 +131,6 @@ Available fields to this template:
                 <td>{{ submitted }}</td>
             </tr>
             <tr>
-                <th>Last Modified</th>
-                <td>{{ modified }}</td>
-            </tr>
-            <tr>
                 <th>Priority</th>
                 <td>{{ priority }}</td>
             </tr>
@@ -131,28 +139,12 @@ Available fields to this template:
                 <td>{{ severity }}</td>
             </tr>
             <tr>
+                <th>Last Modified</th>
+                <td>{{ modified }}</td>
+            </tr>
+            <tr>
                 <th>Reproducibility</th>
                 <td>{{ repro }}</td>
-            </tr>
-            <tr>
-                <th>Reporter</th>
-                <td>{{ reporter }}</td>
-            </tr>
-            <tr>
-                <th>Project</th>
-                <td>{{ project }}</td>
-            </tr>
-            <tr>
-                <th>Category</th>
-                <td>{{ category }}</td>
-            </tr>
-            <tr>
-                <th>Summary</th>
-                <td>{{ summary }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ description }}</td>
             </tr>
             <tr>
                 <th>Steps to reproduce</th>
