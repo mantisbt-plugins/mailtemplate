@@ -177,15 +177,18 @@ function email_template_bugnote( $p_bugnote, $p_project_id, $p_show_time_trackin
 
 	// fetch additional data
 	$t_bug_id =  $p_bugnote->bug_id;
-	$variable['bug_id'] = $t_bug_id;
-	$variable['bug_url'] = string_get_bug_view_url_with_fqdn( $t_bug_id );
-	$t_query 	= "SELECT summary,name FROM {bug} B , {category} WHERE B.category_id = C.id and B.id = $t_bug_id";
-	$t_result	= db_query($t_query);
-	$row_1 = db_fetch_array($t_result)
-	$t_summary	= $row_1['summary'];
-	$t_category	= $t_row['name'];
-	$variable['summary'] = $t_summary;
-	$variable['category'] = $t_category;
+
+	$variables['bug_id'] = $t_bug_id;
+	$variables['bug_url'] = string_get_bug_view_url_with_fqdn( $t_bug_id );
+	$t_query        = "SELECT summary, C.name AS category_name, P.name AS project_name FROM {bug} B , {category} C, {project} P WHERE B.category_id = C.id AND B.project_id = P.id and B.id = $t_bug_id";
+	$t_result       = db_query($t_query);
+	$row_1 = db_fetch_array($t_result);
+	$t_summary      = $row_1['summary'];
+	$t_category     = $row_1['category_name'];
+	$t_project      = $row_1['project_name'];
+	$variables['summary'] = $t_summary;
+	$variables['category'] = $t_category;
+	$variables['project'] = $t_project;
 	
 	// Load the template
 	$template_definition = config_get( 'note_mailtemplate' );
@@ -197,4 +200,3 @@ function email_template_bugnote( $p_bugnote, $p_project_id, $p_show_time_trackin
 	}
 	return $template;
 }
-
