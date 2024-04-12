@@ -40,7 +40,7 @@ Available fields to this template:
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
+        h3 {
             color: #333;
             background: #f2f2f2;
             padding: 10px;
@@ -88,7 +88,7 @@ Available fields to this template:
 
 <body>
     <div class="container">
-        <h2>{{ top_line }}</h2>
+        <h3>{{ summary }}</h3>
         <br>
         <table>
             <tr>
@@ -96,20 +96,20 @@ Available fields to this template:
                 <td><a href={{ url }}>{{ bug_id }}</a></td>
             </tr>
             <tr>
-                <th>Issue Summary</th>
-                <td>{{ summary }}</td>
-            </tr>
-            <tr>
                 <th>Project/Category</th>
                 <td>{{ project }}: {{ category }}</td>
             </tr>
             <tr>
-                <th>Note ID </th>
-                <td><a href={{ url }}>{{ note_id }}</a></td>
+                <th>Author</th>
+                <td>{{ reporter }}</td>
             </tr>
             <tr>
-                <th>Reporter</th>
-                <td>{{ reporter }}</td>
+                <th>Note</th>
+                <td><pre>{{ note }}</pre></td>
+            </tr>
+            <tr>
+                <th>Note ID </th>
+                <td><a href={{ url }}>{{ note_id }}</a></td>
             </tr>
             <tr>
                 <th>Access level</th>
@@ -126,10 +126,6 @@ Available fields to this template:
             <tr>
                 <th>Timetracking</th>
                 <td><pre>{{ timetrack }}</pre></td>
-            </tr>
-            <tr>
-                <th>Note</th>
-                <td><pre>{{ note }}</pre></td>
             </tr>
         </table>
     </div>
