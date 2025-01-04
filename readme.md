@@ -26,22 +26,25 @@ Released under the [GPL v3 license](http://opensource.org/licenses/GPL-3.0).
     a. Copy `~/distribution/core/template_api.php` into `~/mantis/core/` folder.
     b. Copy `~/distribution/core/templates/` folder into `~/mantis/core/` folder.
 
-3. If using Mantis 2.26:
-    - Copy `~/distribution/core/email_api-226.php` to `~/mantis/core/` folder.
-
-4. If using Mantis 2.25:
+3. If using Mantis 2.25:
     - Copy `~/distribution/core/email_api-225.php` to `~/mantis/core/` folder.
 
-5. For both Mantis 2.25 and 2.26:
+4. If using Mantis 2.26:
+    - Copy `~/distribution/core/email_api-226.php` to `~/mantis/core/` folder.
+
+5. If using Mantis 2.27:
+    - Copy `~/distribution/core/email_api-227.php` to `~/mantis/core/` folder.
+
+5. For Mantis 2.25, 2.26 and 2.27:
     - Rename `~/mantis/core/email_api-XXX.php` to `~/mantis/core/email_api.php`.
 
-6. Next, edit `~/distribution/config/entries-config_inc.php`:
+7. Next, edit `~/distribution/config/entries-config_inc.php`:
     - Change paths below to reflect the actual path to your Mantis installation (typically `/var/www/html/`, but may vary):
         - `$g_newbug_mailtemplate = "/path/to/mantis/core/templates/newbug_mailtemplate.html";`
         - `$g_bug_mailtemplate = "/path/to/mantis/core/templates/bug_mailtemplate.html";`
         - `$g_note_mailtemplate = "/path/to/mantis/core/templates/note_mailtemplate.html";`
 
-7. Finally, paste entire text in `~/distribution/config/entries-config_inc.php` to the bottom of `~/mantis/config/config_inc.php`.
+8. Finally, paste entire text in `~/distribution/config/entries-config_inc.php` to the bottom of `~/mantis/config/config_inc.php`.
 
 
 ## Configuration
@@ -75,7 +78,9 @@ File bug reports and submit questions on the
 
 ## Warning
 
-Remember that when upgrading you will need to adjust core/email_api.php again:(
+Remember that when upgrading you will need to adjust core/email_api.php again:(<br>
+In case there is no prepared email-api.php, you can do it manual.<br>
+All entries are marked with a start and ending indicator starting with "## CN"
 
 ## Remarks
 Please let me know how to further improve.....
@@ -95,3 +100,4 @@ Have a blast!
 12-04-2024	Added 4 fields to bug_note_template<br>
 12-04-2024	Documented all fields for (and within) the bug_note_template<br>
 12-04-2024 	Merged various updates/fixes from pkbarbiedoll (thanks for that)<br>
+04-01-2025	Added prepared email-api.php for mantis 2.27<br>
