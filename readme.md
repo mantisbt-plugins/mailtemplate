@@ -3,11 +3,11 @@
 
 This is not a plugin but a guide to use templated HTML emails within MantisBT.
 
-Version 20240314
+Version 20250104
 
 ## Copyright
 
-	- 2020/2024 Cas Nuy (www.NUY.info)
+	- 2020/2025 Cas Nuy (www.NUY.info)
 	
 ## License                                                                                    
 
@@ -58,7 +58,7 @@ Basic configuration is done within config/config_inc.php:
 
 ### Template lay-outs
 
-After instllation, template files are located in ~/mantis/core/templates/
+After installation, template files are located in ~/mantis/core/templates/
 
 Three layouts are provided:
 - bug_mailtemplate.html
@@ -80,7 +80,7 @@ File bug reports and submit questions on the
 
 Remember that when upgrading you will need to adjust core/email_api.php again:(<br>
 In case there is no prepared email-api.php, you can do it manual.<br>
-All entries are marked with a start and ending indicator starting with "## CN"
+All entries are marked with a start and ending indicator like "## CN-start" and "## CN-end"
 
 ## Remarks
 Please let me know how to further improve.....

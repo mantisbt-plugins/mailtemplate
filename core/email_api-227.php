@@ -46,6 +46,9 @@
  * @uses user_api.php
  * @uses user_pref_api.php
  * @uses utility_api.php
+ ## CN-start
+ * @uses template_api.php
+ ## CN-end
  *
  * @uses PHPMailerAutoload.php PHPMailer library
  *
