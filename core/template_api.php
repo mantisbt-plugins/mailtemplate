@@ -32,6 +32,7 @@ function email_template_bug_message( $issue_data,$top_line ) {
 			$cfdata .= '<tr><td>'.utf8_str_pad( lang_get_defaulted( $t_custom_field_name, null ) . ': ', $t_email_padding_length, ' ', STR_PAD_RIGHT ).'</td>';
 			$cfdata .= '<td>'.string_custom_field_value_for_email( $t_custom_field_data['value'], $t_custom_field_data['type'] ).'</td></tr>';
 		}
+		$cfdata .='</table>';
 	} else {
 		$cfdata = "Not Available";
 	}
