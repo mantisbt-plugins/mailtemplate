@@ -55,7 +55,7 @@ Basic configuration is done within config/config_inc.php:
 
 - $g_use_mailtemplate		= ON;  # OFF will disable mailhtml
 - $g_escape_mailtemplate	= OFF;
-- $g_default_email_bugnote_limit= 0;   # Standard mantis setting 
+- $g_default_email_bugnote_limit= 0;   # Standard mantis setting (Users can override this in their account settings.)
 
 ### Template lay-outs
 
